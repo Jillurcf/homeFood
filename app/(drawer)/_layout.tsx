@@ -102,6 +102,18 @@ const DrawerLayourt = () => {
                 }}
             />
             <Drawer.Screen
+                name="MyOrder"
+                options={{
+                    drawerItemStyle: { },
+                }}
+            />
+            <Drawer.Screen
+                name="SellOrder"
+                options={{
+                    drawerItemStyle: { },
+                }}
+            />
+            <Drawer.Screen
                 name="HelpAndSupport"
                 options={{
                     drawerItemStyle: { },
