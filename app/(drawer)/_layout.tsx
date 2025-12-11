@@ -1,10 +1,21 @@
 import { IconBack, IconLogout } from '@/assets/Icons/Icon';
+import NormalModal from '@/src/components/NormalModal';
+import TButton from '@/src/components/TButton';
 import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
+import { router } from 'expo-router';
 import { Drawer } from 'expo-router/drawer';
+import React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { SvgXml } from 'react-native-svg';
 import tw from '../../src/lib/tailwind';
 const DrawerLayourt = () => {
+    const [logoutConfirmationModalVisible, setLogoutConfirmationModalVisible] = React.useState(false);
+
+    const handleLogout = () => { 
+        router.replace('/(auth)/Login');
+        setLogoutConfirmationModalVisible(false);
+     }
+
     return (
         <Drawer
             screenOptions={{
@@ -45,7 +56,7 @@ const DrawerLayourt = () => {
                     <View style={tw`px-4 py-4`}>
                         <TouchableOpacity
                             style={tw`flex-row gap-4 px-4`}
-                        //    onPress={() => setLogoutConfirmationModalVisible(true)}
+                           onPress={() => setLogoutConfirmationModalVisible(true)}
                         >
                             <View style={tw`flex-row items-center gap-4 mb-[4%]`}>
                                 <SvgXml xml={IconLogout} />
@@ -53,7 +64,7 @@ const DrawerLayourt = () => {
                             </View>
                         </TouchableOpacity>
                     </View>
-                    {/* <NormalModal
+                    <NormalModal
             layerContainerStyle={tw`flex-1 justify-center items-center `}
             containerStyle={tw`rounded-xl bg-[#141316] w-[80%] `}
             visible={logoutConfirmationModalVisible}
@@ -85,7 +96,7 @@ const DrawerLayourt = () => {
                 </View>
               </View>
             </View>
-          </NormalModal> */}
+          </NormalModal>
                 </View>
             )}
         >

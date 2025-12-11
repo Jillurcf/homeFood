@@ -1,10 +1,12 @@
 import { IconHomeDark, IconHomeLight, IconSettings } from "@/assets/Icons/Icon";
+import { useShop } from "@/src/store/shopStore";
 import { Tabs } from "expo-router";
 import { Platform, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { SvgXml } from "react-native-svg";
 
 const _layout = () => {
+    const { isShopAdded } = useShop();
     const insets = useSafeAreaInsets();
     return (
         <Tabs
@@ -25,12 +27,16 @@ const _layout = () => {
                 },
                 tabBarLabelStyle: {
                     display: 'none',
-                    backgroundColor: 'none'
+                    backgroundColor: 'none',
+
                 },
                 tabBarIconStyle: {
                     justifyContent: 'center',
                     alignItems: 'center',
-                }
+                },
+                tabBarItemStyle: {
+                    marginVertical: 10,
+                },
             }}
         >
             <Tabs.Screen name="index"
@@ -38,7 +44,7 @@ const _layout = () => {
                     tabBarIcon: ({ color, focused }) => (
                         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                             <SvgXml
-                                xml={focused ? IconHomeDark :IconHomeLight }
+                                xml={focused ? IconHomeDark : IconHomeLight}
                                 width={20}
                                 height={20}
                                 fill={color}
@@ -47,6 +53,8 @@ const _layout = () => {
                     ),
                 }}
             />
+           
+
             <Tabs.Screen name="settings"
                 options={{
                     tabBarIcon: ({ color, focused }) => (
@@ -65,3 +73,6 @@ const _layout = () => {
     )
 }
 export default _layout;
+
+
+

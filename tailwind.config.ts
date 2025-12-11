@@ -7,18 +7,18 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        // AvenirLTProBlack: 'AvenirLTProBlack',
-        // AvenirLTProBlackOblique: 'AvenirLTProBlackOblique',
-        // AvenirLTProBook: 'AvenirLTProBook',
-        // AvenirLTProBookOblique: 'AvenirLTProBookOblique',
-        // AvenirLTProHeavy: 'AvenirLTProHeavy',
-        // AvenirLTProHeavyOblique: 'AvenirLTProHeavyOblique',
-        // AvenirLTProLight: 'AvenirLTProLight',
-        // AvenirLTProLight: 'AvenirLTProLight',
-        // AvenirLTProMedium: 'AvenirLTProMedium',
-        // AvenirLTProMediumOblique: 'AvenirLTProMediumOblique',
-        // AvenirLTProOblique: 'AvenirLTProOblique',
-        // AvenirLTProRoman: 'AvenirLTProRoman'
+        AvenirLTProBlack: 'AvenirLTProBlack',
+        AvenirLTProBlackOblique: 'AvenirLTProBlackOblique',
+        AvenirLTProBook: 'AvenirLTProBook',
+        AvenirLTProBookOblique: 'AvenirLTProBookOblique',
+        AvenirLTProHeavy: 'AvenirLTProHeavy',
+        AvenirLTProHeavyOblique: 'AvenirLTProHeavyOblique',
+        AvenirLTProLight: 'AvenirLTProLight',
+        AvenirLTProLight: 'AvenirLTProLight',
+        AvenirLTProMedium: 'AvenirLTProMedium',
+        AvenirLTProMediumOblique: 'AvenirLTProMediumOblique',
+        AvenirLTProOblique: 'AvenirLTProOblique',
+        AvenirLTProRoman: 'AvenirLTProRoman'
       },
 
       colors: {

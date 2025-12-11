@@ -34,6 +34,8 @@ PODS:
     - ExpoModulesCore
   - ExpoBlur (14.1.5):
     - ExpoModulesCore
+  - ExpoClipboard (7.1.5):
+    - ExpoModulesCore
   - ExpoFileSystem (18.1.11):
     - ExpoModulesCore
   - ExpoFont (13.3.2):
@@ -1434,7 +1436,7 @@ PODS:
     - React-jsiexecutor
     - React-RCTFBReactNativeSpec
     - ReactCommon/turbomodule/core
-  - react-native-keyboard-controller (1.19.6):
+  - react-native-keyboard-controller (1.20.1):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1449,7 +1451,7 @@ PODS:
     - React-hermes
     - React-ImageManager
     - React-jsi
-    - react-native-keyboard-controller/common (= 1.19.6)
+    - react-native-keyboard-controller/common (= 1.20.1)
     - React-NativeModulesApple
     - React-RCTFabric
     - React-renderercss
@@ -1459,7 +1461,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-keyboard-controller/common (1.19.6):
+  - react-native-keyboard-controller/common (1.20.1):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -2173,6 +2175,7 @@ DEPENDENCIES:
   - Expo (from `../node_modules/expo`)
   - ExpoAsset (from `../node_modules/expo-asset/ios`)
   - ExpoBlur (from `../node_modules/expo-blur/ios`)
+  - ExpoClipboard (from `../node_modules/expo-clipboard/ios`)
   - ExpoFileSystem (from `../node_modules/expo-file-system/ios`)
   - ExpoFont (from `../node_modules/expo-font/ios`)
   - ExpoHaptics (from `../node_modules/expo-haptics/ios`)
@@ -2287,6 +2290,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/expo-asset/ios"
   ExpoBlur:
     :path: "../node_modules/expo-blur/ios"
+  ExpoClipboard:
+    :path: "../node_modules/expo-clipboard/ios"
   ExpoFileSystem:
     :path: "../node_modules/expo-file-system/ios"
   ExpoFont:
@@ -2470,6 +2475,7 @@ SPEC CHECKSUMS:
   Expo: f715b0c058ac26efde6fb3b4f18ffdd8bd933605
   ExpoAsset: 7bdbbacf4e6752ae6e3cf70555cee076f6229e6e
   ExpoBlur: 846780b2c90f59e964b9a50385d4deb67174ebfb
+  ExpoClipboard: 6b9aae54fd48a579473fb101051ad693435b9294
   ExpoFileSystem: 9681caebda23fa1b38a12a9c68b2bade7072ce20
   ExpoFont: 091a47eeaa1b30b0b760aa1d0a2e7814e8bf6fe6
   ExpoHaptics: 68c215e070f660e0a29c45dcda4f60eeff08aefb
@@ -2521,7 +2527,7 @@ SPEC CHECKSUMS:
   React-logger: 6eca7d3c56341f3b001cf67d40452acfc4be7fa1
   React-Mapbuffer: 14cd6e1e5d4d088b3a8b2260f5aa8bba305462b0
   React-microtasksnativemodule: f3d90da65ab56fb854b77b70e3a8f63561cdabc6
-  react-native-keyboard-controller: 948d51c97e8b76d8c9546074a1eb972626689b99
+  react-native-keyboard-controller: 357d96b55cf797c6f3db0e356083522f5a73ed37
   react-native-safe-area-context: 00d03dc688ba86664be66f9e3f203fc7d747d899
   react-native-webview: cde150463e7caa49b316b0ed1871e7ef8193bef4
   React-NativeModulesApple: a398af5d9799bb49f0b0fabab09c362a3899d8bc

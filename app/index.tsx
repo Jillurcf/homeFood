@@ -6,7 +6,7 @@ export default function Index() {
   useEffect (() => {
     
     const timer = setTimeout(() => {
-      router.replace("/(drawer)/(tabs)");
+      router.replace("/(auth)/Login");
      
     }, 500); 
 
