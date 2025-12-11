@@ -1,7 +1,7 @@
 import { IconHomeDark, IconHomeLight, IconSettings } from "@/assets/Icons/Icon";
 import { useShop } from "@/src/store/shopStore";
 import { Tabs } from "expo-router";
-import { Platform, View } from "react-native";
+import { View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { SvgXml } from "react-native-svg";
 
@@ -22,8 +22,8 @@ const _layout = () => {
                     left: 0,
                     right: 0,
                     // 👇 Platform-specific bottom height
-                    height: Platform.OS === 'ios' ? 60 + insets.bottom : 60,
-                    paddingBottom: Platform.OS === 'ios' ? insets.bottom : 8,
+                    // height: Platform.OS === 'ios' ? 60 + insets.bottom : 60,
+                    // paddingBottom: Platform.OS === 'ios' ? insets.bottom : 50,
                 },
                 tabBarLabelStyle: {
                     display: 'none',
@@ -33,10 +33,11 @@ const _layout = () => {
                 tabBarIconStyle: {
                     justifyContent: 'center',
                     alignItems: 'center',
+                    
                 },
-                tabBarItemStyle: {
-                    marginVertical: 10,
-                },
+                // tabBarItemStyle: {
+                //     marginVertical: 10,
+                // },
             }}
         >
             <Tabs.Screen name="index"
