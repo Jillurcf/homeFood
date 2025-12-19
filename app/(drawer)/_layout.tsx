@@ -11,17 +11,17 @@ import tw from '../../src/lib/tailwind';
 const DrawerLayourt = () => {
     const [logoutConfirmationModalVisible, setLogoutConfirmationModalVisible] = React.useState(false);
 
-    const handleLogout = () => { 
+    const handleLogout = () => {
         router.replace('/(auth)/Login');
         setLogoutConfirmationModalVisible(false);
-     }
+    }
 
     return (
         <Drawer
             screenOptions={{
                 headerShown: false,
                 drawerType: 'front',
-                drawerStyle: [tw`bg-backgroundColor`, {marginTop: -50}],
+                drawerStyle: [tw`bg-backgroundColor`, { marginTop: -50 }],
                 // {
                 //     backgroundColor: '#000000',
                 //     marginTop: -50,
@@ -56,47 +56,47 @@ const DrawerLayourt = () => {
                     <View style={tw`px-4 py-4`}>
                         <TouchableOpacity
                             style={tw`flex-row gap-4 px-4`}
-                           onPress={() => setLogoutConfirmationModalVisible(true)}
+                            onPress={() => setLogoutConfirmationModalVisible(true)}
                         >
-                            <View style={tw`flex-row items-center gap-4 mb-[4%]`}>
+                            <View style={tw`flex-row items-center gap-4`}>
                                 <SvgXml xml={IconLogout} />
                                 <Text style={tw`text-red-500 `}>Logout</Text>
                             </View>
                         </TouchableOpacity>
                     </View>
                     <NormalModal
-            layerContainerStyle={tw`flex-1 justify-center items-center `}
-            containerStyle={tw`rounded-xl bg-[#141316] w-[80%] `}
-            visible={logoutConfirmationModalVisible}
-            setVisible={setLogoutConfirmationModalVisible}
-          >
-            <View>
-              <Text style={tw`text-white text-2xl text-center font-AvenirLTProBlack mb-2`}>
-                Are you sure to {'\n'}Logout?
-              </Text>
+                        layerContainerStyle={tw`flex-1 justify-center items-center `}
+                        containerStyle={tw`rounded-xl bg-[#141316] w-[80%] `}
+                        visible={logoutConfirmationModalVisible}
+                        setVisible={setLogoutConfirmationModalVisible}
+                    >
+                        <View>
+                            <Text style={tw`text-white text-2xl text-center font-AvenirLTProBlack mb-2`}>
+                                Are you sure to {'\n'}Logout?
+                            </Text>
 
-              <View style={tw`mt-2`}>
-                <View style={tw`items-center mb-4`}>
-                  <TButton
-                    title="Yes"
-                    titleStyle={tw`text-[#262329] text-[16px] font-AvenirLTProBlack`}
-                    containerStyle={tw`w-[100%] bg-white `}
-                    onPress={handleLogout}
-                  />
-                </View>
-                <View style={tw`items-center w-full`}>
-                  <TButton
-                    title="Cancel"
-                    titleStyle={tw`text-white text-[16px] font-AvenirLTProBlack`}
-                    containerStyle={[tw`w-[100%]`, { backgroundColor: 'rgba(255,255,255,0.2)' }]}
-                    onPress={() => {
-                      setLogoutConfirmationModalVisible(false);
-                    }}
-                  />
-                </View>
-              </View>
-            </View>
-          </NormalModal>
+                            <View style={tw`mt-2`}>
+                                <View style={tw`items-center mb-4`}>
+                                    <TButton
+                                        title="Yes"
+                                        titleStyle={tw`text-[#262329] text-[16px] font-AvenirLTProBlack`}
+                                        containerStyle={tw`w-[100%] bg-white `}
+                                        onPress={handleLogout}
+                                    />
+                                </View>
+                                <View style={tw`items-center w-full`}>
+                                    <TButton
+                                        title="Cancel"
+                                        titleStyle={tw`text-white text-[16px] font-AvenirLTProBlack`}
+                                        containerStyle={[tw`w-[100%]`, { backgroundColor: 'rgba(255,255,255,0.2)' }]}
+                                        onPress={() => {
+                                            setLogoutConfirmationModalVisible(false);
+                                        }}
+                                    />
+                                </View>
+                            </View>
+                        </View>
+                    </NormalModal>
                 </View>
             )}
         >
@@ -109,31 +109,31 @@ const DrawerLayourt = () => {
             <Drawer.Screen
                 name="Notifications"
                 options={{
-                    drawerItemStyle: { },
+                    drawerItemStyle: {},
                 }}
             />
             <Drawer.Screen
                 name="MyOrder"
                 options={{
-                    drawerItemStyle: { },
+                    drawerItemStyle: {},
                 }}
             />
             <Drawer.Screen
                 name="SellOrder"
                 options={{
-                    drawerItemStyle: { },
+                    drawerItemStyle: {},
                 }}
             />
             <Drawer.Screen
                 name="HelpAndSupport"
                 options={{
-                    drawerItemStyle: { },
+                    drawerItemStyle: {},
                 }}
             />
             <Drawer.Screen
                 name="Settings"
                 options={{
-                    drawerItemStyle: { },
+                    drawerItemStyle: {},
                 }}
             />
 

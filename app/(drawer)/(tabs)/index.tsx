@@ -154,7 +154,7 @@ const Index = () => {
                 />
             </View>
 
-            <StatusBar backgroundColor="black" />
+            <StatusBar backgroundColor="black" translucent={false} />
         </View>
     );
 };
